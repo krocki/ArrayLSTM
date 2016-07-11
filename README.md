@@ -3,13 +3,12 @@
 
 <snippet>
   <content><![CDATA[
-# ${1:Array-LSTM}
+# Array-LSTM
 Technical Report: Recurrent Memory Array Structures
 Arxiv 1610414, 11 July 2016
 ## Installation
 
-to compile:
-run
+to compile, run:
 
 make PRECISE_MATH=0 cuda
 
