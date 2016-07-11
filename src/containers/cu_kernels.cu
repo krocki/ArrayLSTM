@@ -1121,15 +1121,16 @@ __global__ void kernel_elementwise_gauss_lstm_backward (
 #define f_gates 2 * elements
 #define c_gates 3 * elements
 
-__global__ void kernel_elementwise_surprisal_lstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t B ) {
-		
+__global__ void kernel_elementwise_surprisal_lstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -1220,14 +1221,15 @@ __global__ void kernel_elementwise_surprisal_lstm_backward (
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_mlstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_mlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -1379,16 +1381,17 @@ __global__ void kernel_elementwise_sparselstm_sparsity ( size_t N, size_t L, siz
 	}
 }
 
-__global__ void kernel_elementwise_sparselstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ prev_h,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_sparselstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_h,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -1572,15 +1575,16 @@ __global__ void kernel_elementwise_sparselstm_backward (
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_clstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_clstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -2454,15 +2458,16 @@ __global__ void kernel_elementwise_cmlstm_backward (
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_hlstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_hlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -2644,14 +2649,15 @@ __global__ void kernel_elementwise_hlstm_backward (
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_hclstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_hclstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -2845,14 +2851,15 @@ __global__ void kernel_elementwise_hclstm_backward (
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_hmlstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_hmlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -4348,17 +4355,18 @@ void cu_elementwise_splstm_backward (
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_splstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ max_o,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ rands,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_splstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
