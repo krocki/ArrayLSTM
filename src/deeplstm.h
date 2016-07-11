@@ -33,42 +33,27 @@
 #include <containers/datatype.h>
 
 /* different layer types */
-//#include <layers/srnn.h>
 
-//#include <layers/cu_lstm.h>
 #ifdef __USE_CUDA__
+	
 	#include <layers/lstm_cuda.h>
-	//#include <layers/lstm_cuda_no_x.h>
-	//#include <layers/cu_lstm_do.h>
-	//#include <layers/cu_lstm_do2.h>
+	#include <layers/hlstm.h>
 	#include <layers/cu_softmax.h>
-	//#include <layers/cu_softmax_do.h>
-	//#include <layers/mlstm.h>
-	#include <layers/hhlstm.h>
-	#include <layers/plstm.h>
 	#include <layers/splstm.h>
 	#include <layers/clstm.h>
-	#include <layers/sparse.h>
-	#include <layers/cmlstm.h>
 	#include <layers/hmlstm.h>
-	
 	#include <layers/alstm.h>
-	#include <layers/aclstm.h>
 	#include <layers/dolstm.h>
 	#include <layers/attLSTM.h>
 	#include <layers/hardattLSTM.h>
-	#include <layers/surprisalLSTM.h>
-	#include <layers/gaussLSTM.h>
 	
-	//shared gates
-	#include <layers/aslstm.h>
-	#include <layers/hclstm.h>
-	#include <layers/hlstm.h>
 #else
 	
 	/*cpu code*/
 	#include <layers/lstm_devel.h>
+	//#include <layers/srnn.h>
 	#include <layers/softmax.h>
+	
 #endif
 
 /*TODO : remove. unsafe */
@@ -100,6 +85,14 @@ class DeepLSTM {
 				// TODO:
 				
 			}
+			
+			//TODO: remove layer declaration from here
+			
+			/*			layers.push_back ( new aLSTM<MatrixType> ( _M, _N, _B, _S, 2 ) );
+			
+						for ( size_t d = 1; d < D; d++ )
+							layers.push_back ( new aLSTM<MatrixType> ( _N, _N, _B, _S, 2 ) );
+			*/
 			
 			//D LSTM layers
 			layers.push_back ( new LSTM<MatrixType> ( _M, _N, _B, _S ) );

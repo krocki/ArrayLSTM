@@ -18,7 +18,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- *
+ * Implementation of hard-attention Array-LSTM
+ * Report: Section 5.2.1 Stochastic hard attention
  */
 
 #ifndef _hardattLSTM_H_

@@ -18,7 +18,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * Implementation of attLSTM layer
+ * Implementation of soft attention layer
+ * Described in report in Section 4.1: Lane selection, Soft attention
  *
  */
 

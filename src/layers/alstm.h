@@ -18,8 +18,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * Implementation of aLSTM layer
- *
+ * Stochastic Array Memory layer
+ * Described in TR in Section 5.2 (Stochastic Array Memory, variant with 1 of K cell active)
  */
 
 #ifndef _aLSTM_H_

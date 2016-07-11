@@ -20,7 +20,7 @@
  *
  * run like this
  *
- * ./deeplstm N B S GPU
+ * ./deeplstm N B S GPU (test_every_seconds)
  *
  */
 
@@ -50,6 +50,8 @@ int main ( int argc, char *argv[] ) {
 	for ( int i = 0; i < argc; ++i )
 		printf ( "argv[ %d ] = %s\n", i, argv[ i ] );
 		
+	// run like this: ./deeplstm 512 100 64 0
+	
 	assert ( argc >= 5 );
 	
 	// hidden size
@@ -65,6 +67,14 @@ int main ( int argc, char *argv[] ) {
 	
 	const int 	gpu_number 	= atoi ( argv[4] );
 	
+	// test every seconds, for example every 60s test and generate a sample
+	size_t    test_every;
+	
+	if ( argc > 5 )
+		test_every      = atoi ( argv[5] );
+	else
+		test_every      = 3600;
+		
 	bool dropout = true;
 	
 	cudaSetDevice ( gpu_number );
@@ -73,12 +83,11 @@ int main ( int argc, char *argv[] ) {
 	
 	/* TODO: move to command line */
 	MatrixXi 	_data           = rawread ( "data/enwik8.txt" );
-	std::string out_filename    	= "enwik8_lstm_0703_N" + std::to_string ( N ) +
+	std::string out_filename    	= "enwik8_lstm_0708_N" + std::to_string ( N ) +
 									  "_S" + std::to_string ( S ) +
 									  "_B" + std::to_string ( B ) ;
 									  
 	const size_t    epoch_length    = 10000;
-	const size_t    test_every      = 10;
 	const dtype     learning_rate   = 1e-3 * 1;
 	const size_t    epochs          = 1000000;
 	const dtype     loss_dampening  = 0.999;
@@ -91,7 +100,7 @@ int main ( int argc, char *argv[] ) {
 	const float     train_percent   = 90.0f;
 	const float     valid_percent   = 5.0f;
 	
-	size_t serialize_every = 8; // * test_every
+	size_t serialize_every = 24; // * test_every, creates a large file
 	size_t serialize_counter = 0;
 	
 	double test_loss_dampening = 0.0;
@@ -246,9 +255,8 @@ int main ( int argc, char *argv[] ) {
 			
 			for ( size_t b = 0; b < B; b++ ) {
 			
-				size_t event = ( ( int * )
-								 data.data() ) [positions[b]];      // current observation, uchar (0-255)
-								 
+				size_t event = ( ( int * ) data.data() ) [positions[b]];      // current observation, uchar (0-255)
+				
 				for ( size_t t = 0; t < S; t++ ) {
 				
 					size_t ev_x = ( ( int * ) data.data() ) [positions[b] + t];
@@ -304,22 +312,31 @@ int main ( int argc, char *argv[] ) {
 					- std err
 				
 				*/
-				std::tuple<size_t, dtype, dtype, dtype, dtype> test_error_tuple, test2_error_tuple, train_error_tuple;
 				
-				train_error_tuple = deeplstm.test_batch ( data, epoch_length / 10, codes, reset_std,
-									loss_in_bits );
-				test_error_tuple = deeplstm.test_batch ( valid, epoch_length / 10, codes, reset_std,
-								   loss_in_bits );
-								   
-				test2_error_tuple = deeplstm.test_batch ( test, epoch_length / 10, codes, reset_std,
-									loss_in_bits );
-									
+				/* sample */
+				//TODO: change to std::string
+				std::vector<char> generated_text = deeplstm.sample ( 5000,
+												   codes, " ", reset_std );
+												   
+				std::ofstream FILE ( "samples/" + out_filename +
+									 "_sample" "_" + to_string_with_precision ( test_error * 1000,
+											 0 ) + ".txt", std::ios::out | std::ofstream::binary );
+											 
+				std::copy ( generated_text.begin(), generated_text.end(),
+							std::ostreambuf_iterator<char> ( FILE ) );
+							
+				FILE.close();
+				/* end sample */
+				
+				/* test */
+				std::tuple<size_t, dtype, dtype, dtype, dtype> test_error_tuple, test2_error_tuple, train_error_tuple;
+				train_error_tuple = deeplstm.test_batch ( data, epoch_length / 10, codes, reset_std, loss_in_bits );
+				test_error_tuple = deeplstm.test_batch ( valid, epoch_length / 10, codes, reset_std, loss_in_bits );
+				test2_error_tuple = deeplstm.test_batch ( test, epoch_length / 10, codes, reset_std, loss_in_bits );
+				
 				dtype avg_test_error = std::get<2> ( test_error_tuple );
 				dtype avg_train_error = std::get<2> ( train_error_tuple );
-				
 				dtype avg_test2_error = std::get<2> ( test2_error_tuple );
-				
-				//std::cout << "Test: " <<  avg_test2_error << std::endl;
 				
 				if ( !std::isnan ( avg_test_error ) && !std::isinf ( avg_test_error ) )
 					test_error = test_error < 0 ? avg_test_error : test_error *
@@ -332,26 +349,10 @@ int main ( int argc, char *argv[] ) {
 								  
 				size_t test_length = test.rows();
 				
-				// std::cout << std::setprecision ( 3 ) << "Smooth loss: " << smooth_loss << ", Train error: " <<
-				// 		  train_error << ", Test error: " << test_error << std::endl;
-				
 				// TODO: clean up
 				results_size++;
 				
-				//TODO: change to std::string
-				std::vector<char> generated_text = deeplstm.sample ( 5000,
-												   codes, " ", reset_std );
-												   
-				std::ofstream FILE ( "samples/" + out_filename +
-									 "_sample" "_" + to_string_with_precision ( test_error * 1000,
-											 0 ) + ".txt", std::ios::out | std::ofstream::binary );
-				std::copy ( generated_text.begin(), generated_text.end(),
-							std::ostreambuf_iterator<char> ( FILE ) );
-							
-				FILE.close();
-				
 				/* TODO: move this somewhere */
-				
 				std::string results =
 					to_string_with_precision ( results_size, 0 ) + " " +
 					to_string_with_precision ( ( e + ( float ) ( i + 1 ) / ( float ) epoch_length ), 1 ) + " " +
@@ -372,12 +373,15 @@ int main ( int argc, char *argv[] ) {
 					to_string_with_precision ( std::get<3> ( test2_error_tuple ), 3 ) + " " +
 					to_string_with_precision ( std::get<4> ( test2_error_tuple ), 3 );
 					
-				std::ofstream out ( "results6/" + out_filename + ".txt", std::ofstream::out | std::ofstream::app );
+				std::ofstream out ( "results/" + out_filename + ".txt", std::ofstream::out | std::ofstream::app );
 				
 				out << results << std::endl;
 				std::cout << results << std::endl;
 				out.close();
 				
+				/* end test */
+				
+				/* serialization */
 				if ( serialize_counter == serialize_every ) {
 				
 					std::cout << "Syncing CPU-GPU... " << std::flush;
@@ -394,6 +398,7 @@ int main ( int argc, char *argv[] ) {
 					serialize_counter = 0;
 				}
 				
+				/* end serialization */
 				test_timer.start();
 				
 			}

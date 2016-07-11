@@ -88,6 +88,5 @@ std::string to_string_with_precision ( const T a_value, const int n = 6 ) {
 								  std::setw(8) << std::setprecision(6) << "ce = " << smooth_loss << \
 								  std::setw(7) << std::setprecision(1) << gflops_per_sec << \
 								  " GFlOP/s    " << "\r" << std::flush;
-// << (double)total_bytes_copied / (double)(1024 * 1024 * 1024)
-// << " GB \r" << std::flush;
+
 #endif

@@ -78,6 +78,7 @@ class matrix {
 		
 			bytes_allocated = rows * cols * sizeof ( T );
 			
+			//if using cuda matrix: use page locked memory
 			#ifdef __CUDA_MATRIX__
 			cudaMallocHost ( ( void ** ) & ( _data_ ),  bytes_allocated );
 			#else
@@ -95,6 +96,7 @@ class matrix {
 			
 				if ( _data_ != nullptr ) {
 				
+					//if using cuda matrix: use page locked memory
 					#ifdef __CUDA_MATRIX__
 					cudaFreeHost ( _data_ );
 					#else

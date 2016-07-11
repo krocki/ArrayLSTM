@@ -53,7 +53,7 @@
 #include <assert.h>
 #include <containers/cu_matrix.h>
 
-/* this is pseudo adadelta */
+/* this is pseudo-adadelta */
 template<typename T>
 void adadelta ( Parameters<T> &weights, Parameters<T> &gradients, Parameters<T> &memory, Parameters<T> &updates,
 				const dtype learning_rate, const dtype rho ) {
@@ -86,37 +86,6 @@ void adadelta ( Parameters<T> &weights, Parameters<T> &gradients, Parameters<T> 
 	
 }
 
-template<typename T>
-void adadelta_decay ( Parameters<T> &weights, Parameters<T> &gradients, Parameters<T> &memory, Parameters<T> &updates,
-					  const dtype learning_rate, const dtype rho, const dtype decay ) {
-					  
-	assert ( weights.matrices.size() ==
-			 gradients.matrices.size() &&
-			 weights.matrices.size() == memory.matrices.size() );
-			 
-	auto sqrt_eps = [] ( const dtype x, const dtype eps ) { return _sqrt ( x + eps ); };
-	
-	for ( size_t i = 0; i < weights.matrices.size(); i++ ) {
-	
-		#ifdef __CUDA_MATRIX__
-	
-		cu_elementwise_adadelta_decay (	learning_rate, rho,
-										weights.matrices[i].cu_data,
-										gradients.matrices[i].cu_data,
-										memory.matrices[i].cu_data,
-										updates.matrices[i].cu_data,
-										weights.matrices[i].size(), decay );
-										
-										
-										
-		#else
-										
-		#endif
-										
-										
-	}
-	
-}
 template<typename T>
 void adagrad ( Parameters<T> &weights, Parameters<T> &gradients, Parameters<T> &memory,
 			   const dtype learning_rate ) {
