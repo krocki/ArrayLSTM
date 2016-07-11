@@ -19,13 +19,7 @@ CPU versions are outdated, OpenCL version is not fully implemented
 If you still wish to compile the CPU version run:
 
 ```
-make PRECISE_MATH=1 cpu
-```
-
-or 
-
-```
-make PRECISE_MATH=0 cpu
+make cpu
 ```
 
 ## Usage
