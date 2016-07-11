@@ -4,17 +4,19 @@
 <snippet>
   <content>
 # Array-LSTM
-Technical Report: Recurrent Memory Array Structures
-Arxiv 1610414, 11 July 2016
-## Installation
+Implementation of recurrent array memory from "Recurrent Memory Array Structures" Technical Report, Arxiv 1610414, 11 July 2016
+## Getting Started
+to compile:
 
-to compile, run:
-
+```
 make PRECISE_MATH=0 cuda
-
+```
 or for precise FP64 (useful for debugging)
+
+```
 make PRECISE_MATH=1 cuda
- 
+```
+
 CPU versions are outdated, OpenCL version is not fully implemented
 
 ## Usage
