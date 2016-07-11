@@ -83,15 +83,8 @@ class Softmax : public Timelayer<T> {
 			cu_add_row_vector ( & ( s ( t, p ) ).cu_data[0], & ( p ( b ) ).cu_data[0], this->N, s ( t, p ).rows() );
 			
 			// for numerical stability
-			
-			// s ( t, p ).sync_host();
-			
 			cu_row_max ( maxima.cu_data,  s ( t, p ).cu_data, this->N, s ( t, p ).rows() );
 			cu_sub_col_vector ( & ( s ( t, p ) ).cu_data[0], maxima.cu_data, this->N, s ( t, p ).rows() );
-			// std::cout << s(t, p) << std::endl;
-			// maxima.sync_host();
-			// std::cout << "MAX" << std::endl;
-			// std::cout << maxima << std::endl;
 			
 			cu_exp ( & ( s ( t, p ) ).cu_data[0], this->N * s ( t, p ).rows() );
 			

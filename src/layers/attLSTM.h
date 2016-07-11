@@ -128,17 +128,18 @@ class attLSTM : public Timelayer<T> {
 			//cu_rand ( rands.cu_data, rands.size() );
 			
 			//fused
-			cu_elementwise_attlstm_forward (	& ( s ( t, g ).cu_data[0] ),
-												& ( s ( t, g2 ).cu_data[0] ),
-												& ( s ( t, G ).cu_data[0] ),
-												& ( p ( b ).cu_data[0] ),
-												& ( s ( t, h ).cu_data[0] ),
-												& ( s ( t, c ).cu_data[0] ),
-												& ( s ( t, ct ).cu_data[0] ),
-												& ( s ( t - 1, c ).cu_data[0] ),
-												& ( s ( t - 1, h ).cu_data[0] ),
-												N, L, s ( t, c ).rows() );
-												
+			cu_elementwise_attlstm_forward (
+				& ( s ( t, g ).cu_data[0] ),
+				& ( s ( t, g2 ).cu_data[0] ),
+				& ( s ( t, G ).cu_data[0] ),
+				& ( p ( b ).cu_data[0] ),
+				& ( s ( t, h ).cu_data[0] ),
+				& ( s ( t, c ).cu_data[0] ),
+				& ( s ( t, ct ).cu_data[0] ),
+				& ( s ( t - 1, c ).cu_data[0] ),
+				& ( s ( t - 1, h ).cu_data[0] ),
+				N, L, s ( t, c ).rows() );
+				
 			s ( t, c ).sync_host();
 			s ( t, h ).sync_host();
 			
@@ -148,19 +149,20 @@ class attLSTM : public Timelayer<T> {
 		
 			// error coming from higher layers: dh[t] = dy[t]
 			
-			cu_elementwise_attlstm_backward (	& ( g ( t, g ).cu_data[0] ),
-												& ( g ( t, y ).cu_data[0] ),
-												& ( s ( t, c ).cu_data[0] ),
-												& ( s ( t, ct ).cu_data[0] ),
-												& ( g ( t, c ).cu_data[0] ),
-												& ( s ( t, g ).cu_data[0] ),
-												& ( s ( t - 1, c ).cu_data[0] ),
-												& ( g ( t - 1, c ).cu_data[0] ),
-												s ( t, h ).cu_data,
-												& ( s ( t - 1, h ).cu_data[0] ),
-												& ( g ( t - 1, y ).cu_data[0] ),
-												N, L, g ( t, c ).rows() );
-												
+			cu_elementwise_attlstm_backward (
+				& ( g ( t, g ).cu_data[0] ),
+				& ( g ( t, y ).cu_data[0] ),
+				& ( s ( t, c ).cu_data[0] ),
+				& ( s ( t, ct ).cu_data[0] ),
+				& ( g ( t, c ).cu_data[0] ),
+				& ( s ( t, g ).cu_data[0] ),
+				& ( s ( t - 1, c ).cu_data[0] ),
+				& ( g ( t - 1, c ).cu_data[0] ),
+				s ( t, h ).cu_data,
+				& ( s ( t - 1, h ).cu_data[0] ),
+				& ( g ( t - 1, y ).cu_data[0] ),
+				N, L, g ( t, c ).rows() );
+				
 			//backprop through linear part (forward pass step 1)
 			//these are computed in parallel
 			cublasSetStream ( handle, streams[1] );

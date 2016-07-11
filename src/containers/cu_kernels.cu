@@ -809,7 +809,6 @@ __global__ void kernel_elementwise_div_col_vector ( dtype *__restrict__ m,
 void cu_row_max ( dtype *__restrict__ v,  dtype *__restrict__ m, int N, int B, int stream_idx ) {
 
 
-	//size_t num_blocks = (B + NUM_THREADS - 1) / NUM_THREADS;
 	kernel_row_max <<< B, 1, stream_idx>>> ( v, m, N, B );
 	
 	
@@ -826,14 +825,12 @@ __global__ void kernel_row_max ( dtype *__restrict__ v,  dtype *__restrict__ m, 
 	
 	v[tid] = -INFINITY;
 	dtype local_max = -INFINITY;
-	/* TODO make this faster */
+	/* TODO make this better, I really didn't have time to do this properly, need to implement parallel reduction */
 #pragma unroll
 	
 	for ( int n = 0; n < 256; n++ ) {
 	
-		local_max = fmaxf ( local_max, m[tid + B * n] );
-		//printf("%d %d %f %f\n", tid, tid + (int)B * n, v[tid], m[tid + (int)B * n]);
-		
+		local_max = fmaxf ( local_max, m[tid + B * n] );		
 		
 	}
 	
