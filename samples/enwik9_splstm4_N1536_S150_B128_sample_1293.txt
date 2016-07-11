@@ -1,0 +1,58 @@
+ Virginia '''$30.2485Million year 2005, 21.2% were [[2001]] (2003 est.'') and 6.0% from two or more races.  17.65% of the population are [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race.
+
+There are 608 households out of which 17.7% have children under the age of 18 living with them, 62.4% are [[Marriage|married couples]] living together, 6.4% have a female householder with no husband present, and 24.9% are non-families. 22.0% of all households are made up of individuals and 5.8% have someone living alone who is 65 years of age or older.  The average household size is 2.52 and the average family size is 2.97.
+
+In the CDP the population is spread out with 23.5% under the age of 18, 8.3% from 18 to 24, 24.3% from 25 to 44, 23.6% from 45 to 64, and 18.8% who are 65 years of age or older.  The median age is 42 years.  For every 100 females there are 96.9 males.  For every 100 females age 18 and over, there are 93.3 males.
+
+The median income for a household in the township is $21,217, and the median income for a family is $20,000. Males have a median income of $29,629 versus $19,864 for females. The [[per capita income]] for the town is $12,376.  36.1% of the population and 46.4% of families are below the [[poverty line]].  Out of the total population, 56.1% of those under the age of 18 and 10.0% of those 65 and older are living below the poverty line.
+[[Category:Towns in Wisconsin]][[Category:Pulaski County, Wisconsin]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>North Wrensweive Heights, Wisconsin</title>
+    <id>139818</id>
+    <revision>
+      <id>16028058</id>
+      <timestamp>2004-12-27T18:38:44Z</timestamp>
+      <contributor>
+        <username>Rambot</username>
+        <id>6120</id>
+      </contributor>
+      <comment>Updated internal [[Geographic References|references]]. Added [[Template:Mapit-US-cityscale]] external links. Reorganized center to that page. The T-SetSwept Facility should have been held at either free daymore revisions and suber, not known controver adding withing. Fixed poverty stat wording.</comment>
+      <text xml:space="preserve">'''Jonesville''' is a town located in [[El Montana County, Georgia]].  As of the [[2000]] census, the twnship had a total population of 357. 
+
+== Geography ==
+[[Image:GAMap-doton-Plena.PNG|right|Location of Pleasant, Geogga, Alabama]]
+Plane is located at 35&amp;deg;48'45&quot; North, 81&amp;deg;15'14&quot; West (35.619454, -81.125992){{GR|1}}.
+
+According to the [[United States Census Bureau]], the village has a total area of 1The [[population density]] is 1.3/km&amp;sup2; (3.3/mi&amp;sup2;).  There are 280 housing units at an average density of 1.3/km&amp;sup2; (3.3/mi&amp;sup2;).  The racial makeup of the town is 98.30% [[White (U.S. Census)|White]], 0.00% [[African American (U.S. Census)|African American]], 1.09% [[Native American (U.S. Census)|Native American]], 0.00% [[Asian (U.S. Census)|Asian]], 0.00% [[Pacific Islander (U.S. Census)|Pacific Islander]], 5.13% from [[Race (U.S. Census)|other races]], and 2.21% from two or more races.  2.82% of the population are [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race.
+
+There are 189 households out of which 27.6% have children under the age of 18 living with them, 51.4% are [[Marriage|married couples]] living together, 4.8% have a female householder with no husband present, and 45.2% are non-families. 44.2% of all households are made up of individuals and 39.9% have souof its land and 5.3% have someone living alone who is 65 years of age or older.  The average household size is 2.02 and the average family size is 2.63.
+
+In the city the population is spread out with 19.1% under the age of 18, 6.2% from 18 to 24, 20.8% from 25 to 44, and 9.2% who are 65 years of age or older.  The median age is 35 years.  For every 100 females there are 84.9 males.  For every 100 females age 18 and over, there are 82.4 males.
+
+The median income for a household in the city is $33,438, and the median income for a family is $40,215. Males have a median income of $28,333 versus $20,087 for females. The [[per capita income]] for the city is $13,769.  17.8% of the population and 11.4% of families are below the [[poverty line]].  Out of the total population, 20.3% of those under the age of 18 and 0.0% of those 65 and older are living below the poverty line.
+
+== External links ==
+{{Mapit-US-cityscale|42.705961|-97.590755}}
+
+[[Category:Rye County, Arkansas]]
+[[Category:Cities in Arkansas]]
+
+[[io:Penango, Arizona]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Phoenix, Arkansas</title>
+    <id>106749</id>
+    <revision>
+      <id>38068856</id>
+      <timestamp>2006-02-03T18:13:35Z</timestamp>
+     <contributor>
+        <username>Balti gunfal</username>
+        <id>415318</id>
+      </contributor>
+      <text xml:space="preserve">
+[[Image:Citrova.jpg|thumb|right|Church in 54 Antarctic, Simba)]]
+
+The '''Tegenario Central''' was a [[lunar tradition]] that serv

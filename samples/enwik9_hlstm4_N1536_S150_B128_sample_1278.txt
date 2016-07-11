@@ -1,0 +1,63 @@
+ the average enul hap. The [[poverty line]].  Out of the total population, 25.1% of those under the age of 18 and 11.4% of those 65 and older are living below the poverty line.
+
+== External links ==
+{{Mapit-US-cityscale|41.877158|-105.45159}}
+
+[[Category:Claiborne County, South Dakota]]
+[[Category:Cities in Texas]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Aurora, Texas</title>
+    <id>136855</id>
+    <revision>
+      <id>41436330</id>
+      <timestamp>2006-02-27T11:41:57Z</timestamp>
+      <contributor>
+        <ip>70.25.125.141</ip>
+      </contributor>
+      <comment>/* State metropolitan area */</comment>
+      <text xml:space="preserve">'''Audubi''' is a city located in [[Hendcast_County,_South_Dakota]].  As of the [[2000]] census, the city had a total population of 47.
+
+== Geography ==
+Acoma Smocers is located at 37&amp;deg;35'26&quot; North, 76&amp;deg;44'30&quot; West (39.131959, -76.142948){{GR|1}}.
+
+According to the [[United States Census Bureau]], the city has a total area of 44.0 [[square kilometer|km&amp;sup2;]] (16.6 [[square mile|mi&amp;sup2;]]).  43.6 km&amp;sup2; (18.9 mi&amp;sup2;) of it is land and 0.3 km&amp;sup2; (0.1 mi&amp;sup2;) of it is water.  The total area is 1.44% water.
+
+== Demographics ==
+As of the [[census]][[Geographic references#2|&lt;sup&gt;2&lt;/sup&gt;]] of [[2000]], there were 1,120 people, 446 households, and 322 families residing in the city.  The [[population density]] is 202.9/km&amp;sup2; (533.2/mi&amp;sup2;).  There are 327 housing units at an average density of 114.8/km&amp;sup2; (298.9/mi&amp;sup2;).  The racial makeup of the city is 94.58% [[White (U.S. Census)|White]], 1.39% [[African American (U.S. Census)|African American]], 0.20% [[Native American (U.S. Census)|Native American]], 0.31% [[Asian (U.S. Census)|Asian]], 0.19% [[Pacific Islander (U.S. Census)|Pacific Islander]], 4.52% from [[Race (U.S. Census)|other races]], and 1.15% from two or more races.  24.49% of the population are [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race.
+
+There are 355 households out of which 26.3% have children under the age of 18 living with them, 66.3% are [[Marriage|married couples]] living together, 10.9% have a female householder with no husband present, and 28.3% are non-families. 25.9% of all households are made up of individuals and 7.7% have someone living alone who is 65 years of age or older.  The average household size is 3.00 and the average family size is 3.24.
+
+In the city the population is spread out with 41.4% under the age of 18, 5.3% from 18 to 24, 25.2% from 25 to 44, 21.0% from 45 to 64, and 10.6% who are 65 years of age or older.  The median age is 29 years.  For every 100 females there are 93.1 males.  For every 100 females age 18 and over, there are 93.2 males.
+
+The median income for a household in the town is $39,828, and the median income for a family is $41,529. Males have a median income of $26,412 versus $17,775 for females. The [[per capita income]] for the town is $13,058.  62.1% of the population and 23.4% of families are below the [[poverty line]].  Out of the total population, 20.5% of those under the age of 18 and 17.3% of those 65 and older are living below the poverty line.
+{{North_Carolina}}
+
+== External links ==
+{{Mapit-US-cityscale|43.006788|-71.48752}}
+
+[[Category:Green County, North Dakota]]
+[[Category:Towns in North Dakota]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Blue Rose, North Dakota</title>
+    <id>128240</id>
+    <revision>
+      <id>16018457</id>
+      <timestamp>2004-12-23T18:41:16Z</timestamp>
+      <contributor>
+        <username>Rambot</username>
+        <id>6120</id>
+      </contributor>
+      <comment>Updated internal [[Geographic References|references]]. Added [[Template:Mapit-US-cityscale]] external links. Reorganized and cleaned up the page.</comment>
+      <text xml:space="preserve">'''Briarup Smith''' is a [[census-designated place]] located in [[Danville County, North Dakota]].  As of the [[2000]] census, the CDP had a total population of 14.
+
+== Geography ==
+[[Image:NDMap-doton-Britanville.PNG|right|Location of Britiaville, North Dakota]]
+Britanville is located at 47&amp;deg;22'3&quot; North, 99&amp;deg;42'20&quot; West (47.178493, -99.937136){{GR|1}}.
+
+According to the [[United States Census Bureau]], the CDP has a total area of 1.4 [[square kilometer|km&amp;sup2;]] (0.5 [[square mile|mi&amp;sup2;]]).  1.2 km&amp;sup2; (0.5 mi&amp;sup2;) of it is land and none of the area is covered with water.
+
+Speculator is a large South Garden with parts of Bradford and Great Western Wends; housing downtown areas are in the past becoming adjacent to [[Brownlink (town), New York|Brownlvill]].  The population of the city is 11.49 inhabitants.  There are 12,780 households out of which 25.6% have children under the age of 18 living with them, 62.8% are [[Marriage|married couples]] living together, 7.5% have a female householder with no husband present, and 20.9% are non-famil

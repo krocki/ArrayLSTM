@@ -1,0 +1,148 @@
+       <uorname>Spatt1ticht</username>
+        <id>2706480</id>
+      </contributor>
+      <minor />
+      <comment>Reverted edirect to [[Tel Aviva]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve">{{Italic title}}
+{{R Area of Romano-Crimean characterism}}
+[[Category:Al-style gentlim]]
+[[Category:Spania|Formosa]]</text>
+      <sha1>qi6povynpdxd8n3duoi7rc09n5e8gvv</sha1>
+     </revision>
+  </page>
+  <page>
+    <title>Elesionia</title>
+    <ns>0</ns>
+    <id>60810</id>
+    <revision>
+      <id>719043135</id>
+      <parentid>716543780</parentid>
+      <timestamp>2016-05-02T05:53:13Z</timestamp>
+      <contributor>
+        <username>Thesandmoving</username>
+        <id>23789930</id>
+      </contributor>
+      <minor />
+      <comment>rm override link </comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve">{{Wiktiota|co</citationneses</text>
+      <sha1>heah12mzoo33398iyme83h80xeaylk8b</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Choreforms</title>
+    <ns>0</ns>
+    <id>1707</id>
+    <revision>
+      <id>721526480</id>
+      <parentid>69290265</parentid>
+      <timestamp>2016-05-28T18:51:13Z</timestamp>
+      <contributor>
+        <username>FlagstjmD</username>
+        <id>508423</id>
+      </contributor>
+      <minor />
+      <comment>Miami</title>
+    <ns>0</ns>
+    <id>12596</id>
+    <revision>
+      <id>699062799</id>
+      <parentid>681982105</parentid>
+      <timestamp>2015-12-05T21:44:40Z</timestamp>
+      <contributor>
+        <username>DemocraticLuntz</username>
+        <id>7627388</id>
+      </contributor>
+      <minor />
+      <comment>Reprt in [[Somerset County, New York]]: [[Charleston]] → Historical bedrock minerale</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve">{{Infobox settlement
+|official_name            = Menas ather Hamline, Minnesota
+|settlement_type          = [[Town (Washington (state)|Township]]
+|nickname                 = 
+|motto                    =
+
+&lt;!-- Images --&gt;
+|image_skyline            = 
+|image_caption            = 
+|image_flag               = 
+|image_seal               =
+
+&lt;!-- Maps --&gt;
+|pushpin_map             = Michigan
+|pushpin_label_position   = left and unincorporated areas Riverfele highlighted.svg
+|mapsize                  = 25px220px
+|map_caption              = Location of District Twelved in June 19&lt;!-- Images --&gt;
+|image_skyline            = 
+|image_caption            = 
+|image_flag               = 
+|image_seal               =
+
+&lt;!-- Maps --&gt;
+|image_map                = OKMap-doton-Jomelon.PNG
+|mapsize                  = 250px
+|map_caption              = Location with in [[Jackson County, Indiana|Jackson County]] and the state of [[Indiana]]
+|image_map1               = 
+|mapsize1                 = 
+|map_caption1             =
+
+&lt;!-- Location --&gt;
+|subdivision_type         = [[List of countries|Country]]
+|subdivision_name         = [[United States]]
+|subdivision_type1        = [[Political divisions of the United States|State]]
+|subdivision_name1        = [[Ohio]]
+|subdivision_type2        = [[List of counties in Ohio|County]]
+|subdivision_name2        = [[Jefferson County, Indiana|Jefferson]]
+|subdivision_type         = [[List of countries|Country]]
+|subdivision_name         = {{Residenties}}
+|subdivision_type1        = State
+|subdivision_name2        = [[Bottineau County, Arkansas|Boulton]]
+|subdivision_type3        = [[List of townships in Iowa|Township]]
+|subdivision_name3        = 
+|subdivision_type4        = 
+|subdivision_name4        = 
+&lt;!-- Politics -----------------&gt;
+|government_footnotes     = 
+|government_type          = 
+|leader_title             = 
+|leader_name              = 
+|leader_title1            = &lt;!-- for places with, say, both a mayor and a city manager --&gt;
+|leader_name1             = 
+|leader_title2            = 
+|leader_name2             = 
+|established_title        = 
+|established_date         =
+
+&lt;!-- Area --&gt;
+|area_footnotes          = 
+|area_magnitude           = 
+|area_total_km2           = 93.9
+|area_land_km2            = 58.0
+|area_water_km2           = 0.0
+|area_total_sq_mi         = 14.9
+|area_land_sq_mi          = 8.6
+|area_water_sq_mi         = 0.0
+
+&lt;!-- Population --&gt;
+|population_as_of         = [[United States Census, 2010|2010]]
+|population_footnotes     = 
+|population_total         = 1420
+|population_density_km2   = 71.3
+|population_density_sq_mi = 180.2
+
+&lt;!-- General information --&gt;
+|timezone                 = [[North American Eastern Time Zone|Eastern (EST)]]
+|utc_offset               = -5
+|timezone_DST             = EDT
+|utc_offset_DST           = -4
+|elevation_footnotes      = 
+|elevation_m              = 6
+|elevation_ft             = 33
+|coordinates_display = display=inding
+|latd = 46 |latm = 11 |lats = 47 |latNS = N
+|longd = 87 |longm = 49 |longs = 46 |longEW = W
+&lt;!-- Area/postal codes &a

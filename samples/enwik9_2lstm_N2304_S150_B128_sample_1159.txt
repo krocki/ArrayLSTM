@@ -1,0 +1,47 @@
+ 0.9 mi&amp;sup2;) of it is land and none of it is covered by water.
+
+== Demographics ==
+As of the [[census]]{{GR|2}} of [[2000]], there are 209 people, 90 households, and 50 families residing in the city.  The [[population density]] is 104.6/km&amp;sup2; (270.1/mi&amp;sup2;).  There are 88 housing units at an average density of 49.8/km&amp;sup2; (127.8/mi&amp;sup2;).  The racial makeup of the city is 75.80% [[White (U.S. Census)|White]], 4.78% [[African American (U.S. Census)|African American]], 9.20% [[Native American (U.S. Census)|Native American]], 0.36% [[Asian (U.S. Census)|Asian]], 0.00% [[Pacific Islander (U.S. Census)|Pacific Islander]], 1.48% from [[Race (U.S. Census)|other races]], and 0.95% from two or more races.  0.98% of the population are [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race.
+
+There are 158 households out of which 23.9% have children under the age of 18 living with them, 51.4% are [[Marriage|married couples]] living together, 9.1% have a female householder with no husband present, and 35.2% are non-families. 30.4% of all households are made up of individuals and 16.3% have someone living alone who is 65 years of age or older.  The average household size is 2.48 and the average family size is 3.07.
+
+In the village the population is spread out with 24.2% under the age of 18, 9.1% from 18 to 24, 30.4% from 25 to 44, 18.6% from 45 to 64, and 16.6% who are 65 years of age or older.  The median age is 37 years.  For every 100 females there are 108.3 males.  For every 100 females age 18 and over, there are 111.0 males.
+
+The median income for a household in the village is $28,750, and the median income for a family is $31,250. Males have a median income of $30,000 versus $17,188 for females. The [[per capita income]] for the city is $13,101.  14.9% of the population and 9.7% of families are below the [[poverty line]].  Out of the total population, 26.6% of those under the age of 18 and 5.0% of those 65 and older are living below the poverty line.
+
+== External links ==
+{{Mapit-US-cityscale|48.96324|-101.784578}}
+
+[[Category:San Juan County, Utah]]
+[[Category:Towns in Utah]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Stoughton, Utah</title>
+    <id>137174</id>
+    <revision>
+      <id>40425149</id>
+      <timestamp>2006-02-20T13:01:07Z</timestamp>
+     <contributor>
+        <ip>131.21.33.158</ip>
+      </contributor>
+      <comment>/* Demographics */</comment>
+      <text xml:space="preserve">'''Rantoul''' is a borough located in [[Huntsville County, Pennsylvania]], along the [[Randolph River]] on the [[Seward Village]] of [[Bucks County, Pennsylvania]].
+
+== History ==
+The settlement was originally called &quot;Starsville on the Havasuenate Sound&quot;. Over the years it was too visible in the town and traced back to '''The Fourth of September Songs'''.
+
+== Geography ==
+[[Image:WIMap-doton-Spencer-beach.png|right|Location of Spencer-by-the-Sea, Pennsylvania]]
+Squam Springs is located at 40&amp;deg;28'18&quot; North, 76&amp;deg;10'55&quot; West (40.681813, -76.730337){{GR|1}}.
+
+According to the [[United States Census Bureau]], the borough has a total area of 0.9 [[square kilometer|km&amp;sup2;]] (0.3 [[square mile|mi&amp;sup2;]]).  0.9 km&amp;sup2; (0.3 mi&amp;sup2;) of it is land and none of the area is covered with water.
+
+== Demographics ==
+As of the [[census]]{{GR|2}} of [[2000]], there are 869 people, 345 households, and 260 families residing in the borough.  The [[population density]] is 434.5/km&amp;sup2; (1,125.7/mi&amp;sup2;).  There are 431 housing units at an average density of 193.2/km&amp;sup2; (500.3/mi&amp;sup2;).  The racial makeup of the borough is 99.60% [[White (U.S. Census)|White]], 0.00% [[African American (U.S. Census)|African American]], 0.00% [[Native American (U.S. Census)|Native American]], 0.00% [[Asian (U.S. Census)|Asian]], 0.00% [[Pacific Islander (U.S. Census)|Pacific Islander]], 0.46% from [[Race (U.S. Census)|other races]], and 0.78% from two or more races.  0.90% of the population are [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race.
+
+There are 399 households out of which 16.7% have children under the age of 18 living with them, 66.9% are [[Marriage|married couples]] living together, 3.8% have a female householder with no husband present, and 24.9% are non-families. 20.8% of all households are made up of individuals and 13.9% have someone living alone who is 65 years of age or older.  The average household size is 2.64 and the average family size is 3.0.
+
+In the village the population is spread out with 28.4% under the age of 18, 9.2% from 18 to 24, 27.4% from 25 to 44, 20.2% from 45 to 64, and 13.3% who are 65 years of age or older.  The median age is 35 years.  For every 100 females there are 101.4 males.  For every 100 females age 18 and over, there are 103.4 males.
+
+The median income for a household in the village is $47,295, and the median income for a family is $51,250. Mal

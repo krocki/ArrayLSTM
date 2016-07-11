@@ -1,0 +1,108 @@
+               = 
+|map_caption              = 
+|image_skyline            = 
+|imagesize                =
+|image_caption            = 
+|image_flag               = 
+|image_seal               =
+
+&lt;!-- Maps --&gt;
+|image_map = Preston_County_Montana_Incorporated_and_Unincorporated_areas_Manhattan_Highlighted.svg
+|mapsize                  = 250px
+|map_caption              = Location of Manhattan, Montana
+|image_map1               = 
+|mapsize1                 = 
+|map_caption1             =
+
+&lt;!-- Location --&gt;
+|subdivision_type         = [[List of countries|Country]]
+|subdivision_name        = [[United States]]
+|subdivision_type1        = [[Political divisions of the United States|State]]
+|subdivision_name1        = [[Missouri]]
+|subdivision_type2        = [[List of counties in Missouri|County]]
+|subdivision_name2        = [[Ray County, Missouri|Ray]]
+|government_footnotes     = 
+|government_type          = 
+|leader_title             = Mayor
+|leader_name              = Randy La. ([[Republican Party (United States)|R]])&lt;br&gt;Sharry Berthamner (R)&lt;br&gt;Randy J. Aretz Ward, ajor Prayer Municipal Director&lt;br&gt;David F. Powers&lt;br&gt;David Thomas, Pathologist, Edm Willacs
+|leader_title1            = 
+|leader_name1             = 
+|established_title        = 
+|established_date         =
+
+&lt;!-- Area --&gt;
+|unit_pref               = Imperial
+|area_footnotes           = &lt;ref name =&quot;Gazetteer files&quot;/&gt;
+|area_magnitude           = 
+|area_total_km2           = 0.27
+|area_land_km2            = 0.05
+|area_water_km2           = 0
+|area_total_sq_mi         = 0
+|area_land_sq_mi          = 0.17
+|area_water_sq_mi         = 0
+
+&lt;!-- Population --&gt;
+|population_as_of         = [[2010 United States Census|2010]
+|population_est           = 151
+|pop_est_as_of            = 2012&lt;ref name=&quot;2012 Pop Estimate&quot;&gt;{{cite web|title=Population Estimates|url=http://www.census.gov/popest/data/cities/totals/2012/SUB-EST2012.html|publisher=[[United States Census Bureau]]|accessdate=2013-05-29}}&lt;/ref&gt;
+|population_footnotes     = &lt;ref name =&quot;FactFinder&quot;/&gt;
+|population_total         = 494
+|population_density_km2   = 469.3
+|population_density_sq_mi = 120.0
+
+&lt;!-- General information --&gt;
+|timezone                 = [[North American Central Time Zone|Central (CST)]]
+|utc_offset               = -6
+|timezone_DST             = CDT
+|utc_offset_DST           = -5
+|elevation_footnotes      = 
+|elevation_m              = 261
+|elevation_ft             = 862
+|latd = 45 |latm = 48 |lats = 4 |latNS = N
+|longd = 95 |longm = 39 |longs = 20 |longEW = W
+
+&lt;!-- Area/postal codes &amp; others --&gt;
+|postal_code_type         = 
+|postal_code              = 
+|area_code                = 
+|blank_name_sec1          = [[Federal Information Processing Standard|FIPS code]]
+|blank_info_sec1          = 03&lt;ref name=&quot;GR2&quot;&gt;{{cite web|url=http://factfinder2.census.gov|publisher=[[United States Census Bureau]]|accessdate=2008-01-31|title=American FactFinder}}&lt;/ref&gt;
+|blank1_name_sec2         = [[Geographic Names Information System|GNIS]] feature ID
+|blank1_info_sec                   =[http://geography.no.gov/results/cities.php?section=30&amp;place_id=5382 churches] Borough of Agoura Hills - [[Morehouse Tallest Ancestry by City]]
+|unit_pref  =  Imperial
+|area_total_sq_mi         = 0.43
+|area_land_sq_mi          = 0.48
+|area_water_sq_mi         = 0
+|area_total_km2           = 10.29
+|area_land_km2            = 9.68
+|area_water_km2           = 0.2
+|area_water_sq_mi         = 0.0
+|elevation_ft             = 33
+|elevation_m              = 99
+|population_as_of         = [[2010 United States Census|2010]]
+|population_est           = 6256
+|pop_est_as_of            = 2012&lt;ref name=&quot;2012 Pop Estimate&quot;&gt;{{Cite web|title=Population Estimates|url=http://www.census.gov/popest/data/cities/totals/2012/SUB-EST2012.html|publisher=[[United States Census Bureau]]|accessdate=2013-06-26}}&lt;/ref&gt;
+|population_footnotes     = &lt;ref name =&quot;FactFinder&quot;/&gt;
+|population_total         = 4306
+|population_density_km2   = 1479.5
+|population_density_sq_mi = 4183.6
+
+&lt;!-- General information --&gt;
+|timezone                 = [[North American Central Time Zone|Central (CST)]]
+|utc_offset               = -6
+|timezone_DST             = CDT
+|utc_offset_DST           = -5
+|elevation_footnotes      =
+|elevation_m              = 93
+|elevation_ft             = 27
+|coordinates_display      = inline,title
+|coordinates_type         = region:US_type:city
+|latd = 38 |latm = 12 |lats = 29 |latNS = N
+|longd = 94 |longm = 0 |longs = 34 |longEW = W
+
+&lt;!-- Area/postal codes &amp; others --&gt;
+|postal_code_type         = [[ZIP code]]
+|postal_code              = 56065
+|area_code                = [[Area code 937|937]]
+|blank_name1               = [[Federal Information Processing Standard|FIPS code]]
+|blank_info_sec2           = 26-44433&lt;ref name=&quot;GR2&quot;&gt;{{cite web|url=http://factfinder2.c

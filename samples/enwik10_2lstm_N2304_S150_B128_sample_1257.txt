@@ -1,0 +1,112 @@
+        =
+|map_size                  =
+|map_caption              =
+|image_map1               =
+|mapsize1                 =
+|map_caption1             =
+&lt;!-- Location --&gt;
+|subdivision_type         = [[List of countries|Country]]
+|subdivision_name         = [[United States]]
+|subdivision_type1        = [[Political divisions of the United States|State]]
+|subdivision_name1        = [[Montana]]
+|subdivision_type2        = [[List of counties in Montana|County]]
+|subdivision_name2        = [[Fremont County, Washington|Fremont]]
+
+&lt;!-- Government --&gt;
+|government_footnotes     =
+|government_type          =
+|leader_title             =
+|leader_name             =
+|leader_title1            =
+|leader_name1             =
+|established_title        =
+|established_date         =
+
+&lt;!-- Area --&gt;
+|unit_pref  =  Imperial
+|area_footnotes          =
+|area_magnitude          =
+|area_total_km2           = 94.0
+|area_land_km2           = 92.6
+|area_water_km2           = 0.4
+|area_total_sq_mi        = 39.1
+|area_land_sq_mi          = 39.3
+|area_water_sq_mi         = 0.0
+
+&lt;!-- Population --&gt;
+|population_as_of         = [[2000 United States Census|2000]]
+|population_footnotes     =
+|population_total         = 852
+|population_density_km2   = 767.8
+|population_density_sq_mi = 1816.2
+
+&lt;!-- General information --&gt;
+|timezone                 = [[Pacific Time Zone|Pacific (PST)]]
+|utc_offset               = -8
+|timezone_DST             = PDT
+|utc_offset_DST           = -7
+|elevation_footnotes      =
+|elevation_m              = 1460
+|elevation_ft             = 4816
+|coordinates_display      = inline,title
+|latd = 42 |latm = 5 |lats = 2 |latNS = N
+|longd = 102 |longm = 52 |longs = 31 |longEW = W
+
+&lt;!-- Area/postal codes &amp; others --&gt;
+|postal_code_type         = [[ZIP code]]s
+|postal_code             = 53593, 51901, 6122 (Kayenta Co, LA, 11520)&lt;ref&gt;{{cite web|url=http://www.kaycentralinstitute.org/pdf/396731 |title=Wayne County Annex Census 2010 |author=Dakota County Profile |accessdate=February 12, 2016}}&lt;/ref&gt;
+|area_magnitude          =
+|unit_pref                = Imperial
+|area_magnitude           =
+|area_total_km2           = 11.48
+|area_total_sq_mi         = 4.34
+|area_land_km2            = 11.32
+|area_land_sq_mi          = 4.61
+|area_water_km2           = 0
+|area_water_sq_mi         = 0
+|elevation_ft             = 1815
+|elevation_m              = 542
+|population_as_of         = [[2010 United States Census|2010]]
+|population_est          = 26541
+|pop_est_as_of            = 2013
+|pop_est_footnotes        = &lt;ref name=&quot;2013 Pop Estimate&quot;&gt;{{cite web|title=Population Estimates|url=http://www.census.gov/popest/data/cities/totals/2014/SUB-EST2014-3.html|publisher=[[United States Census Bureau]]|accessdate=July 1, 2015}}&lt;/ref&gt;
+|population_footnotes     = &lt;ref name =&quot;FactFinder&quot;/&gt;
+|population_total         = 6995
+|population_metro         = 145026
+|population_blank1_title        = 
+|population_blank1        =
+&lt;!-- General information  ---------------&gt;
+|timezone                 = [[Pacific Time Zone|Pacific]]
+|utc_offset               = -8
+|timezone_DST             = Pacific
+|utc_offset_DST           = -8
+|coordinates_display      = inline,title
+|coordinates_type         = region:US_type:city
+|latd = 55 |latm = 50 |lats = 33 |latNS = N
+|longd = 117 |longm = 12 |longs = 37 |longEW = W
+|elevation_m              = 1805
+|elevation_ft             = 639
+|website                  = [http://www.cityofelgin-ma.gov/|city]      
+|timezone                 = [[Eastern Time Zone|Eastern]]
+|utc_offset               = −8
+|timezone_DST             = [[Eastern Daylight Time|EDT]]
+|utc_offset_DST           = −4
+|latd= 45 |latm= 42 |lats= 18 |latNS=N
+|longd=81 |longm = 17 |longs= 44 |longEW=W
+|coordinates_type         = type:city(1094)_region:US-OR_source:gnis-1125894
+|coordinates_display      = inline,title
+|elevation_footnotes      = &lt;!--for references: use &lt;ref&gt; &lt;/ref&gt; tags--&gt;
+|elevation_m              = 
+|elevation_ft             = 
+|postal_code_type         =
+|postal_code              =
+|area_code                =
+|blank_name               = [[Federal Information Processing Standard|FIPS code]]
+|blank_info               = 24-62485
+|blank1_name              = [[Geographic Names Information System|GNIS]] feature ID
+|blank1_info              = 0494845
+|website                  = 
+|footnotes               = 
+}}
+
+'''McNary''' is a [[Hamlet (New York)|hamlet]] and [[census-designated place]] (CDP) located in the town of [[Lebanon, New York|Lebanon]], [[New York]] in the [[United States]]. It is known for two major businesses: a large block of many thoroughfares, a Coal City encampment, and a solid water reservoir.&lt;ref&gt;{{cite web|title=Home page: 1910©–Stalin Pass. In Montgomery County Table|url=http://www.homesnd.org/depts-in-document/t35-2-7.html|website=Humboldt Town Hall/accounting for embers of the 593-cornerstone electric light districts|publish

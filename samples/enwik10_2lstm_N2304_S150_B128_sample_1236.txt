@@ -1,0 +1,91 @@
+ = 280 |longm = 42 |longs = 40 |longEW = W
+
+&lt;!-- Area/postal codes &amp; others --&gt;
+| postal_code_type        = 
+| postal_code            = 
+| area_code_type         = 
+| area_code              = [[Area code 704|704]]
+| blank_name_sec1        = 
+| blank_info_sec1        = 
+| blank_name_sec1        = 
+| blank_info_sec1        = 
+| website                = 
+}}
+
+'''Hays Township''' is a [[Township (Pennsylvania)|Township subdivision]] of [[United States]] and a [[county seat]].  The population was 1,320 at the 2010 census.
+
+==Geography==
+According to the [[United States Census Bureau]], the township has a total area of {{convert|29.8|sqmi|km2}}, of which, {{convert|28.8|sqmi|km2}} of it is land and {{convert|0.4|sqmi|km2}} of it (0.71%) is water.
+
+==Demographics==
+As of the [[census]]&lt;ref name=&quot;GR2&quot;&gt;{{cite web|url=http://factfinder2.census.gov|publisher=[[United States Census Bureau]]|accessdate=2008-01-31|title=American FactFinder}}&lt;/ref&gt; of 2000, there were 2,323 people, 932 households, and 698 families residing in the township.  The [[population density]] was 48.4 people per square mile (18.4/km²).  There were 903 housing units at an average density of 18.6/sq&amp;nbsp;mi (7.3/km²).  The racial makeup of the township was 99.37% [[White (U.S. Census)|White]], 0.43% from [[Race (United States Census)|other races]], and 0.52% from two or more races. [[Hispanic (U.S. Census)|Hispanic]] or [[Latino (U.S. Census)|Latino]] of any race were 1.22% of the population.
+
+There were 104 households out of which 39.0% had children under the age of 18 living with them, 59.9% were [[Marriage|married couples]] living together, 11.8% had a female householder with no husband present, and 25.80% were non-families. 17.7% of all households were made up of individuals, and 11.7% had someone living alone who was 65 years of age or older.  The average household size was 2.66 and the average family size was 3.03.
+
+In the township the population was spread out with 28.5% under the age of 18, 7.7% from 18 to 24, 34.0% from 25 to 44, 19.5% from 45 to 64, and 8.8% who were 65 years of age or older.  The median age was 35 years. For every 100 females there were 101.7 males.  For every 100 females age 18 and over, there were 105.7 males.
+
+The median income for a household in the township was $32,143, and the median income for a family was $36,250. Males had a median income of $26,750 versus $18,750 for females. The [[per capita income]] for the town was $15,231.  About 9.4% of families and 9.8% of the population were below the [[poverty line]], including 7.1% of those under the age of eighteen and 9.9% of those sixty five or over.
+
+==References==
+{{reflist}}
+
+==External links==
+* [http://www.buddside.org/ South Brushall official website]
+* [http://www.[[Highland Regional School District]]
+* [http://teapotsblog.blgespandet.com/ruskin-2011-2011/ TROYTOUR SCTOR]
+* [http://projectedmiles.org/maps/id.2011/focus/rushforest/humboldt-baykurphy-hamden.php Walters' maps of Humboldt County]
+
+{{Geographic Location
+|Centre    = Bayview County, West Virginia
+|North     = [[Caswell County, West Virginia|Caswell County]]
+|Northeast =
+|East      = [[Braxton County, West Virginia|Braxton County]]
+|Southeast =
+|South     = [[Caldwell County, North Carolina|Caldwell County]]
+|Southwest =
+|West      = [[Bambou County, North Carolina|Amorone County]]
+|Northwest = [[Gadsden County, North Carolina]]
+}}
+
+{{Barrow County, North Carolina}}
+{{North Carolina}}
+
+{{coord|38.14|-75.040|type:city_region:US|format=dms|display=title}}
+
+[[Category:Towns in North Carolina]]
+[[Category:Towns in Barry County, North Carolina]]</text>
+      <sha1>a4wpgtkno0k6li7ffwv0xw7tnn6bex</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Barberton, North Carolina</title>
+    <ns>0</ns>
+    <id>128051</id>
+    <revision>
+      <id>677293362</id>
+      <parentid>669394814</parentid>
+      <timestamp>2015-08-22T22:29:17Z</timestamp>
+      <contributor>
+        <username>DemocraticLuntz</username>
+        <id>7627388</id>
+      </contributor>
+      <comment>(via CenPop script)</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve">{{Infobox settlement
+| official_name            = Campbell, North Carolina
+| settlement_type          = [[Town]]
+[[City seat]]
+| nickname                 =
+| motto                    =
+| image_map                = Barron County North Carolina incorporated and unincorporated areas Bull Creek highlighted.svg
+| map_size                  = 260px
+| map_caption              = Location in [[Erie County, New Jersey|Erie County]] and the state of [[New Jersey]].
+| latd                  =  37.713998
+| longs            =  52.3341
+| relief           = yes
+| map_caption              = map
+| district         = [[Newark Bay]]&lt;br&gt;Mileboton Road
+| source1_lat_dio    = 286th most absent_national-freedom
+| end Name          = [[Keyport (New Haven)|Keyporton (NYERTHERNAM)]]
+| county           = New
