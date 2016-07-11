@@ -28,10 +28,10 @@ run like this
 ```
 ./deeplstm N B S GPU (test_every_seconds)
 ```
-example (512 hidden nodes, 100 BPTT steps, batchsize = 64, GPU id = 0):
+example (512 hidden nodes, 100 BPTT steps, batchsize = 64, GPU id = 0, run test every 1000s):
 
 ```
-./deeplstm 512 100 64 0 
+./deeplstm 512 100 64 0 1000
 ```
 
 ## Author
