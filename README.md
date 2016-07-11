@@ -2,7 +2,7 @@
 
 
 <snippet>
-  <content><![CDATA[
+  <content>
 # Array-LSTM
 Technical Report: Recurrent Memory Array Structures
 Arxiv 1610414, 11 July 2016
@@ -30,8 +30,8 @@ example: ./deeplstm 512 100 64 0 (512 hidden nodes, 100 BPTT steps, batchsize = 
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-## History
-Author: Kamil M Rocki (kmrocki@us.ibm.com)
+## Author
+Kamil M Rocki (kmrocki@us.ibm.com)
 ## License
  Copyright (c) 2016, IBM Corporation. All rights reserved.
  
