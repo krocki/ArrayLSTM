@@ -107,7 +107,7 @@ __global__ void kernel_elementwise_sub ( dtype *__restrict__ c, dtype *__restric
 void cu_sub ( dtype *__restrict__ c, dtype *__restrict__ b, dtype *__restrict__ a, size_t elements, int stream_idx ) {
 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_sub <<< num_blocks, NUM_THREADS, stream_idx>>> ( c, b, a, elements );
+	kernel_elementwise_sub <<<num_blocks, NUM_THREADS, stream_idx>>> ( c, b, a, elements );
 	
 }
 
@@ -126,7 +126,7 @@ __global__ void kernel_elementwise_submax ( dtype *__restrict__ c, size_t n ) {
 void cu_submax ( dtype *__restrict__ data, size_t elements, int idx, int stream_idx ) {
 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_submax <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
+	kernel_elementwise_submax <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
 	
 }
 
@@ -155,7 +155,7 @@ void cu_exp ( dtype *__restrict__ data, size_t elements, int stream_idx ) {
 
 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_exp <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
+	kernel_elementwise_exp <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
 	
 }
 
@@ -170,7 +170,7 @@ __global__ void kernel_elementwise_logistic ( dtype *__restrict__ c, size_t n ) 
 void cu_logistic ( dtype *__restrict__ data, size_t elements, int stream_idx ) {
 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_logistic <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
+	kernel_elementwise_logistic <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
 	
 }
 
@@ -208,7 +208,7 @@ __global__ void kernel_elementwise_tanh ( dtype *__restrict__ c, size_t n ) {
 void cu_tanh ( dtype *__restrict__ data, size_t elements, int stream_idx ) {
 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_tanh <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
+	kernel_elementwise_tanh <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
 	
 }
 
@@ -225,7 +225,7 @@ void cu_div_scalar ( dtype *__restrict__ data, dtype *__restrict__ src, dtype sc
 					 int stream_idx ) {
 					 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_div_scalar <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, src, scalar, elements );
+	kernel_elementwise_div_scalar <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, src, scalar, elements );
 	
 }
 
@@ -242,14 +242,14 @@ void cu_mult_scalar ( dtype *__restrict__ data, dtype *__restrict__ src, dtype s
 					  int stream_idx ) {
 					  
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_mult_scalar <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, src, scalar, elements );
+	kernel_elementwise_mult_scalar <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, src, scalar, elements );
 	
 }
 
 void cu_cmp ( dtype *__restrict__ data, dtype *__restrict__ src, dtype scalar, size_t elements, int stream_idx ) {
 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_cmp <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, src, scalar, elements );
+	kernel_elementwise_cmp <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, src, scalar, elements );
 	
 }
 
@@ -274,7 +274,7 @@ void cu_cmp_matrix ( dtype *__restrict__ data, dtype *__restrict__ src, dtype *_
 					 int stream_idx ) {
 					 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_cmp_matrix <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, src, matrix, elements );
+	kernel_elementwise_cmp_matrix <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, src, matrix, elements );
 	
 	
 }
@@ -282,7 +282,7 @@ void cu_cmp_matrix ( dtype *__restrict__ data, dtype *__restrict__ src, dtype *_
 void cu_elementwise_zeros ( dtype *__restrict__ data, size_t elements, int stream_idx ) {
 
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_zeros <<< num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
+	kernel_elementwise_zeros <<<num_blocks, NUM_THREADS, stream_idx>>> ( data, elements );
 	
 	
 }
@@ -314,7 +314,7 @@ void cu_dtanh ( dtype *__restrict__ data0, dtype *__restrict__ data1, dtype *__r
 				int stream_idx = 0 ) {
 				
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_dtanh <<< num_blocks, NUM_THREADS, stream_idx>>> ( data0, data1, data2, elements );
+	kernel_elementwise_dtanh <<<num_blocks, NUM_THREADS, stream_idx>>> ( data0, data1, data2, elements );
 	
 }
 
@@ -332,7 +332,7 @@ void cu_elementwise_mult ( dtype *__restrict__ data0, dtype *__restrict__ data1,
 						   size_t elements, int stream_idx ) {
 						   
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_mult <<< num_blocks, NUM_THREADS, stream_idx>>> ( data0, data1, data2, elements );
+	kernel_elementwise_mult <<<num_blocks, NUM_THREADS, stream_idx>>> ( data0, data1, data2, elements );
 	
 }
 
@@ -350,7 +350,7 @@ void cu_elementwise_mult_add ( dtype *__restrict__ data0, dtype *__restrict__ da
 							   size_t elements, int stream_idx ) {
 							   
 	size_t num_blocks = ( elements + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_mult_add <<< num_blocks, NUM_THREADS, stream_idx>>> ( data0, data1, data2, elements );
+	kernel_elementwise_mult_add <<<num_blocks, NUM_THREADS, stream_idx>>> ( data0, data1, data2, elements );
 	
 }
 
@@ -365,7 +365,7 @@ void cu_elementwise_lstm_forward (
 	size_t N, size_t B, int stream_idx ) {
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_lstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N, B );
+	kernel_elementwise_lstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N, B );
 	
 }
 
@@ -382,7 +382,7 @@ void cu_elementwise_lstm_backward (
 	
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_lstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,  N,
+	kernel_elementwise_lstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,  N,
 			B );
 			
 }
@@ -399,7 +399,7 @@ void cu_elementwise_gauss_lstm_forward (
 	size_t N, size_t B, int stream_idx ) {
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_gauss_lstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, rands, N,
+	kernel_elementwise_gauss_lstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, rands, N,
 			B );
 			
 }
@@ -416,15 +416,15 @@ void cu_elementwise_gauss_lstm_backward (
 	size_t N, size_t B, int stream_idx ) {
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_gauss_lstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
+	kernel_elementwise_gauss_lstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
 			prev_dc,  N,
 			B );
 			
 }
 
 void cu_elementwise_surprisal_lstm_forward (
-	dtype *__restrict__ g, 
-	dtype *__restrict__ g2, 
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
 	dtype *__restrict__ b,
 	dtype *__restrict__ h,
 	dtype *__restrict__ c,
@@ -433,7 +433,7 @@ void cu_elementwise_surprisal_lstm_forward (
 	size_t N, size_t B, int stream_idx ) {
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_surprisal_lstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N,
+	kernel_elementwise_surprisal_lstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N,
 			B );
 			
 }
@@ -451,8 +451,8 @@ void cu_elementwise_surprisal_lstm_backward (
 	
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_surprisal_lstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
-			prev_dc, N,B );
+	kernel_elementwise_surprisal_lstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
+			prev_dc, N, B );
 			
 }
 
@@ -466,7 +466,7 @@ void cu_elementwise_mlstm_forward (
 	size_t N, size_t L, size_t B, int stream_idx ) {
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_mlstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
+	kernel_elementwise_mlstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
 	
 }
 
@@ -481,271 +481,301 @@ void cu_elementwise_mlstm_backward (
 	size_t N, size_t L, size_t B, int stream_idx ) {
 	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_mlstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc,  N, L,
+	kernel_elementwise_mlstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc,  N, L,
 			B );
 			
 }
 
-void cu_elementwise_clstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									dtype *__restrict__ h,
-									dtype *__restrict__ c,
-									dtype *__restrict__ ct,
-									dtype *__restrict__ prev_c,
-									size_t N, size_t L, size_t B, int stream_idx ) {
-									
+void cu_elementwise_clstm_forward (
+	dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_clstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N, L, B );
+	kernel_elementwise_clstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N, L, B );
 	
 }
 
-void cu_elementwise_clstm_backward ( dtype *__restrict__ dg,
-									 dtype *__restrict__ dh,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ ct,
-									 dtype *__restrict__ dc,
-									 dtype *__restrict__ g,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ prev_dc,
-									 dtype *__restrict__ h,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
-									 
+void cu_elementwise_clstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_clstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_clstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc, h,
 			N, L, B );
 			
 }
 
 
-void cu_elementwise_sparselstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ prev_h,
-		size_t N, size_t L, size_t B, int stream_idx ) {
-		
+void cu_elementwise_sparselstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_h,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_sparselstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, prev_h,
+	kernel_elementwise_sparselstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, prev_h,
 			N,
 			L, B );
 			
 }
 
 
-void cu_elementwise_sparselstm_backward ( dtype *__restrict__ dg,
-		dtype *__restrict__ dh,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ dc,
-		dtype *__restrict__ g,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ prev_dc,
-		dtype *__restrict__ h,
-		dtype *__restrict__ prev_h,
-		dtype *__restrict__ prev_dh,
-		size_t N, size_t L, size_t B, int stream_idx ) {
-		
-		
+void cu_elementwise_sparselstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ prev_h,
+	dtype *__restrict__ prev_dh,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_sparselstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
+	kernel_elementwise_sparselstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
 			prev_dc, h, prev_h, prev_dh, N, L, B );
 			
 }
 
 /* v2 */
-void cu_elementwise_hardattlstm_forward (	dtype *__restrict__ g, dtype *__restrict__ g2,
-		dtype *__restrict__ G, dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ max_o,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ prev_h,
-		dtype *__restrict__ rands,
-		size_t N, size_t L, size_t B, int stream_idx ) {
-		
+void cu_elementwise_hardattlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ G,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_h,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hardattlstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, G, b, h, max_o, c, ct,
+	kernel_elementwise_hardattlstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, G, b, h, max_o, c, ct,
 			prev_c,
 			prev_h, rands, N, L, B );
 			
 }
 
-void cu_elementwise_hardattlstm_backward ( dtype *__restrict__ dg,
-		dtype *__restrict__ dh,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ dc,
-		dtype *__restrict__ g,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ prev_dc,
-		dtype *__restrict__ h,
-		dtype *__restrict__ max_o,
-		dtype *__restrict__ prev_h,
-		dtype *__restrict__ prev_dh,
-		size_t N, size_t L, size_t B, int stream_idx ) {
-		
-		
+void cu_elementwise_hardattlstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ prev_h,
+	dtype *__restrict__ prev_dh,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hardattlstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
+	kernel_elementwise_hardattlstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c,
 			prev_dc, h, max_o, prev_h, prev_dh, N, L, B );
 			
 }
 
-void cu_elementwise_attlstm_forward (	dtype *__restrict__ g, dtype *__restrict__ g2,
-										dtype *__restrict__ G, dtype *__restrict__ b,
-										dtype *__restrict__ h,
-										dtype *__restrict__ c,
-										dtype *__restrict__ ct,
-										dtype *__restrict__ prev_c,
-										dtype *__restrict__ prev_h,
-										size_t N, size_t L, size_t B, int stream_idx ) {
-										
+void cu_elementwise_attlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ G,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_h,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_attlstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, G, b, h, c, ct, prev_c, prev_h,
+	kernel_elementwise_attlstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, G, b, h, c, ct, prev_c, prev_h,
 			N,
 			L, B );
 			
 }
 
-void cu_elementwise_attlstm_backward ( dtype *__restrict__ dg,
-									   dtype *__restrict__ dh,
-									   dtype *__restrict__ c,
-									   dtype *__restrict__ ct,
-									   dtype *__restrict__ dc,
-									   dtype *__restrict__ g,
-									   dtype *__restrict__ prev_c,
-									   dtype *__restrict__ prev_dc,
-									   dtype *__restrict__ h,
-									   dtype *__restrict__ prev_h,
-									   dtype *__restrict__ prev_dh,
-									   size_t N, size_t L, size_t B, int stream_idx ) {
-									   
-									   
+void cu_elementwise_attlstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ prev_h,
+	dtype *__restrict__ prev_dh,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_attlstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,
+	kernel_elementwise_attlstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,
 			h, prev_h, prev_dh, N, L, B );
 			
 }
 
-void cu_elementwise_cmlstm_forward (	dtype *__restrict__ g, dtype *__restrict__ g2,
-										dtype *__restrict__ G, dtype *__restrict__ b,
-										dtype *__restrict__ h,
-										dtype *__restrict__ c,
-										dtype *__restrict__ prev_c,
-										dtype *__restrict__ prev_h,
-										dtype *__restrict__ rands,
-										size_t N, size_t L, size_t B, int stream_idx ) {
-										
+void cu_elementwise_cmlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ G,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_h,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_cmlstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, G, b, h, c, prev_c, prev_h, rands,
+	kernel_elementwise_cmlstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, G, b, h, c, prev_c, prev_h, rands,
 			N, L, B );
 			
 }
 
-void cu_elementwise_cmlstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  dtype *__restrict__ prev_h,
-									  dtype *__restrict__ prev_dh,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_cmlstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ prev_h,
+	dtype *__restrict__ prev_dh,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_cmlstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_cmlstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
 			prev_h, prev_dh, N, L, B );
 			
 }
 
-void cu_elementwise_hlstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									dtype *__restrict__ h,
-									dtype *__restrict__ c,
-									dtype *__restrict__ ct,
-									dtype *__restrict__ prev_c,
-									size_t N, size_t L, size_t B, int stream_idx ) {
-									
+void cu_elementwise_hlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hlstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N, L, B );
+	kernel_elementwise_hlstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, ct, prev_c, N, L, B );
 	
 }
 
-void cu_elementwise_hlstm_backward ( dtype *__restrict__ dg,
-									 dtype *__restrict__ dh,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ ct,
-									 dtype *__restrict__ dc,
-									 dtype *__restrict__ g,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ prev_dc,
-									 dtype *__restrict__ h,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
-									 
+void cu_elementwise_hlstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hlstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_hlstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc, h,
 			N, L, B );
 			
 }
 
-void cu_elementwise_hclstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ prev_c,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
+void cu_elementwise_hclstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hclstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
+	kernel_elementwise_hclstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
 	
 }
 
-void cu_elementwise_hclstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_hclstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hclstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_hclstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
 			N,
 			L, B );
 			
 }
 
-void cu_elementwise_hmlstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ prev_c,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
+void cu_elementwise_hmlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hmlstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
+	kernel_elementwise_hmlstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
 	
 }
 
-void cu_elementwise_hmlstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_hmlstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hmlstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_hmlstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
 			N,
 			L, B );
 			
@@ -773,7 +803,7 @@ __global__ void kernel_elementwise_add_row_vector ( dtype *__restrict__ m,
 void cu_add_row_vector ( dtype *__restrict__ m, dtype *__restrict__ v, size_t N, size_t B, int stream_idx ) {
 
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_add_row_vector <<< num_blocks, NUM_THREADS, stream_idx>>> ( m, v, N, B );
+	kernel_elementwise_add_row_vector <<<num_blocks, NUM_THREADS, stream_idx>>> ( m, v, N, B );
 	
 }
 
@@ -809,7 +839,7 @@ __global__ void kernel_elementwise_div_col_vector ( dtype *__restrict__ m,
 void cu_row_max ( dtype *__restrict__ v,  dtype *__restrict__ m, int N, int B, int stream_idx ) {
 
 
-	kernel_row_max <<< B, 1, stream_idx>>> ( v, m, N, B );
+	kernel_row_max <<<B, 1, stream_idx>>> ( v, m, N, B );
 	
 	
 }
@@ -828,12 +858,11 @@ __global__ void kernel_row_max ( dtype *__restrict__ v,  dtype *__restrict__ m, 
 	/* TODO make this better, I really didn't have time to do this properly, need to implement parallel reduction */
 #pragma unroll
 	
-	for ( int n = 0; n < 256; n++ ) {
+	for ( int n = 0; n < 256; n++ )
 	
-		local_max = fmaxf ( local_max, m[tid + B * n] );		
+		local_max = fmaxf ( local_max, m[tid + B * n] );
 		
-	}
-	
+		
 	v[tid] = local_max;
 }
 
@@ -858,7 +887,7 @@ __global__ void kernel_elementwise_sub_col_vector ( dtype *__restrict__ m,
 void cu_div_col_vector ( dtype *__restrict__ m, dtype *__restrict__ v, size_t N, size_t B, int stream_idx ) {
 
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_div_col_vector <<< num_blocks, NUM_THREADS, stream_idx>>> ( m, v, N, B );
+	kernel_elementwise_div_col_vector <<<num_blocks, NUM_THREADS, stream_idx>>> ( m, v, N, B );
 	
 	
 }
@@ -866,7 +895,7 @@ void cu_div_col_vector ( dtype *__restrict__ m, dtype *__restrict__ v, size_t N,
 void cu_sub_col_vector ( dtype *__restrict__ m, dtype *__restrict__ v, size_t N, size_t B, int stream_idx ) {
 
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_sub_col_vector <<< num_blocks, NUM_THREADS, stream_idx>>> ( m, v, N, B );
+	kernel_elementwise_sub_col_vector <<<num_blocks, NUM_THREADS, stream_idx>>> ( m, v, N, B );
 	
 	
 }
@@ -875,7 +904,7 @@ void cu_sub_col_vector ( dtype *__restrict__ m, dtype *__restrict__ v, size_t N,
 void cu_sub_max ( dtype *__restrict__ m, size_t N, int stream_idx ) {
 
 	size_t num_blocks = ( N + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_sub_max <<< num_blocks, NUM_THREADS, stream_idx>>> ( m, N );
+	kernel_sub_max <<<num_blocks, NUM_THREADS, stream_idx>>> ( m, N );
 	
 }
 
@@ -895,15 +924,16 @@ __global__ void kernel_sub_max ( dtype *__restrict__ m, size_t N ) {
 #define f_gates 2 * elements
 #define c_gates 3 * elements
 
-__global__ void kernel_elementwise_lstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t B ) {
-		
+__global__ void kernel_elementwise_lstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -1043,7 +1073,7 @@ __global__ void kernel_elementwise_gauss_lstm_forward (
 }
 
 __global__ void kernel_elementwise_gauss_lstm_backward (
-
+	
 	dtype *__restrict__ dg,
 	dtype *__restrict__ dh,
 	dtype *__restrict__ c,
@@ -1310,7 +1340,7 @@ __device__ float target = 0.1f;
 void cu_elementwise_sparselstm_sparsity ( size_t N, size_t L, size_t B, size_t S, dtype *__restrict__ b, dtype corr ) {
 
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_sparselstm_sparsity <<< num_blocks, NUM_THREADS>>> ( N, L, B, S, b, corr );
+	kernel_elementwise_sparselstm_sparsity <<<num_blocks, NUM_THREADS>>> ( N, L, B, S, b, corr );
 	
 }
 
@@ -3024,30 +3054,34 @@ __global__ void kernel_elementwise_hmlstm_backward (
 
 /*******/
 
-void cu_elementwise_hhlstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ prev_c,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
+void cu_elementwise_hhlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hhlstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
+	kernel_elementwise_hhlstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, c, prev_c, N, L, B );
 	
 }
 
-void cu_elementwise_hhlstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_hhlstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_hhlstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_hhlstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
 			N,
 			L, B );
 			
@@ -3058,14 +3092,15 @@ void cu_elementwise_hhlstm_backward ( dtype *__restrict__ dg,
 #define f_gates 2 * N * B
 #define c_gates 3 * N * B
 
-__global__ void kernel_elementwise_hhlstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ c,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_hhlstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -3221,32 +3256,36 @@ __global__ void kernel_elementwise_hhlstm_backward (
 
 /****************************************/
 
-void cu_elementwise_plstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									dtype *__restrict__ h,
-									dtype *__restrict__ max_o,
-									dtype *__restrict__ c,
-									dtype *__restrict__ prev_c,
-									size_t N, size_t L, size_t B, int stream_idx ) {
-									
+void cu_elementwise_plstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_plstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, prev_c, N, L, B );
+	kernel_elementwise_plstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, prev_c, N, L, B );
 	
 }
 
-void cu_elementwise_plstm_backward ( dtype *__restrict__ dg,
-									 dtype *__restrict__ dh,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ dc,
-									 dtype *__restrict__ g,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ prev_dc,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ max_o,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
-									 
+void cu_elementwise_plstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_plstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_plstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
 			max_o,  N, L, B );
 			
 }
@@ -3256,15 +3295,16 @@ void cu_elementwise_plstm_backward ( dtype *__restrict__ dg,
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_plstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ max_o,
-		dtype *__restrict__ c,
-		dtype *__restrict__ prev_c,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_plstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -3383,70 +3423,78 @@ __global__ void kernel_elementwise_plstm_backward (
 
 /****************************************/
 
-void cu_elementwise_alstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									dtype *__restrict__ h,
-									dtype *__restrict__ max_o,
-									dtype *__restrict__ c,
-									dtype *__restrict__ ct,
-									dtype *__restrict__ prev_c,
-									dtype *__restrict__ rands,
-									size_t N, size_t L, size_t B, int stream_idx ) {
-									
+void cu_elementwise_alstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_alstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, ct, prev_c, rands,
+	kernel_elementwise_alstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, ct, prev_c, rands,
 			N, L, B );
 			
 }
 
-void cu_elementwise_alstm_backward ( dtype *__restrict__ dg,
-									 dtype *__restrict__ dh,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ ct,
-									 dtype *__restrict__ dc,
-									 dtype *__restrict__ g,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ prev_dc,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ max_o,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
-									 
+void cu_elementwise_alstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_alstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_alstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc, h,
 			max_o,  N, L, B );
 			
 }
 
-void cu_elementwise_dolstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ max_o,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ ct,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ rands,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
+void cu_elementwise_dolstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_dolstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, ct, prev_c, rands,
+	kernel_elementwise_dolstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, ct, prev_c, rands,
 			N, L, B );
 			
 }
 
-void cu_elementwise_dolstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ ct,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  dtype *__restrict__ max_o,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_dolstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_dolstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,
+	kernel_elementwise_dolstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,
 			h,
 			max_o,  N, L, B );
 			
@@ -3459,17 +3507,18 @@ void cu_elementwise_dolstm_backward ( dtype *__restrict__ dg,
 #define f_gates 2 * N * B * L
 #define c_gates 3 * N * B * L
 
-__global__ void kernel_elementwise_dolstm_forward ( dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ max_o,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ rands,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_dolstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -3499,7 +3548,8 @@ __global__ void kernel_elementwise_dolstm_forward ( dtype *__restrict__ g,
 				
 				//printf("1 tid = %d l = %d, rand %f, max_o = %d\n", tid, l, rands[tid],  (int)max_o[ltid]);
 				
-			} else {
+			}
+			else {
 			
 				max_o[ltid] = ( dtype ) ( tid + ( 2 * l + 1 ) * N * B );
 				
@@ -3616,17 +3666,18 @@ __global__ void kernel_elementwise_dolstm_backward (
 #define c_gates 3 * N * B * L
 #define s_gates 4 * N * B * L
 
-__global__ void kernel_elementwise_alstm_forward (	dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ max_o,
-		dtype *__restrict__ c,
-		dtype *__restrict__ ct,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ rands,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_alstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -3804,34 +3855,38 @@ __global__ void kernel_elementwise_alstm_backward (
 
 /****************************************/
 
-void cu_elementwise_aclstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ max_o,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ rands,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
+void cu_elementwise_aclstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_aclstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, prev_c, rands, N,
+	kernel_elementwise_aclstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, prev_c, rands, N,
 			L, B );
 			
 }
 
-void cu_elementwise_aclstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  dtype *__restrict__ max_o,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_aclstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_aclstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_aclstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
 			max_o,  N, L, B );
 			
 }
@@ -3842,16 +3897,17 @@ void cu_elementwise_aclstm_backward ( dtype *__restrict__ dg,
 #define c_gates 3 * N * B
 #define s_gates 4 * N * B
 
-__global__ void kernel_elementwise_aclstm_forward ( dtype *__restrict__ g,
-		dtype *__restrict__ g2,
-		dtype *__restrict__ b,
-		dtype *__restrict__ h,
-		dtype *__restrict__ max_o,
-		dtype *__restrict__ c,
-		dtype *__restrict__ prev_c,
-		dtype *__restrict__ rands,
-		size_t N, size_t L, size_t B ) {
-		
+__global__ void kernel_elementwise_aclstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B ) {
+	
 	size_t elements = N * B;
 	
 	/* there are N * B threads */
@@ -4021,34 +4077,38 @@ __global__ void kernel_elementwise_aclstm_backward (
 
 /****************************************/
 
-void cu_elementwise_aslstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ max_o,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ rands,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
+void cu_elementwise_aslstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_aslstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, prev_c, rands, N,
+	kernel_elementwise_aslstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, prev_c, rands, N,
 			L, B );
 			
 }
 
-void cu_elementwise_aslstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  dtype *__restrict__ max_o,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_aslstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_aslstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
+	kernel_elementwise_aslstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, dc, g, prev_c, prev_dc, h,
 			max_o,  N, L, B );
 			
 }
@@ -4244,36 +4304,40 @@ __global__ void kernel_elementwise_aslstm_backward (
 /****************************************/
 
 
-void cu_elementwise_splstm_forward ( dtype *__restrict__ g, dtype *__restrict__ g2, dtype *__restrict__ b,
-									 dtype *__restrict__ h,
-									 dtype *__restrict__ max_o,
-									 dtype *__restrict__ c,
-									 dtype *__restrict__ ct,
-									 dtype *__restrict__ prev_c,
-									 dtype *__restrict__ rands,
-									 size_t N, size_t L, size_t B, int stream_idx ) {
-									 
+void cu_elementwise_splstm_forward (
+	dtype *__restrict__ g,
+	dtype *__restrict__ g2,
+	dtype *__restrict__ b,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ rands,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_splstm_forward <<< num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, ct, prev_c, rands,
+	kernel_elementwise_splstm_forward <<<num_blocks, NUM_THREADS, stream_idx>>> ( g, g2, b, h, max_o, c, ct, prev_c, rands,
 			N, L, B );
 			
 }
 
-void cu_elementwise_splstm_backward ( dtype *__restrict__ dg,
-									  dtype *__restrict__ dh,
-									  dtype *__restrict__ c,
-									  dtype *__restrict__ ct,
-									  dtype *__restrict__ dc,
-									  dtype *__restrict__ g,
-									  dtype *__restrict__ prev_c,
-									  dtype *__restrict__ prev_dc,
-									  dtype *__restrict__ h,
-									  dtype *__restrict__ max_o,
-									  size_t N, size_t L, size_t B, int stream_idx ) {
-									  
-									  
+void cu_elementwise_splstm_backward (
+	dtype *__restrict__ dg,
+	dtype *__restrict__ dh,
+	dtype *__restrict__ c,
+	dtype *__restrict__ ct,
+	dtype *__restrict__ dc,
+	dtype *__restrict__ g,
+	dtype *__restrict__ prev_c,
+	dtype *__restrict__ prev_dc,
+	dtype *__restrict__ h,
+	dtype *__restrict__ max_o,
+	size_t N, size_t L, size_t B, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N * B + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_splstm_backward <<< num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,
+	kernel_elementwise_splstm_backward <<<num_blocks, NUM_THREADS, stream_idx>>> ( dg, dh, c, ct, dc, g, prev_c, prev_dc,
 			h,
 			max_o,  N, L, B );
 			
@@ -4449,41 +4513,44 @@ __global__ void kernel_elementwise_splstm_backward (
 #undef c_gates
 
 /******************************************/
-void cu_elementwise_adagrad (	dtype learning_rate,
-								dtype *__restrict__ p,
-								dtype *__restrict__ d,
-								dtype *__restrict__ m,
-								size_t N, int stream_idx ) {
-								
-								
+void cu_elementwise_adagrad (
+	dtype learning_rate,
+	dtype *__restrict__ p,
+	dtype *__restrict__ d,
+	dtype *__restrict__ m,
+	size_t N, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_adagrad <<< num_blocks, NUM_THREADS, stream_idx>>> ( learning_rate, p, d, m, N );
+	kernel_elementwise_adagrad <<<num_blocks, NUM_THREADS, stream_idx>>> ( learning_rate, p, d, m, N );
 	
 }
 
-void cu_elementwise_adadelta (	dtype learning_rate, dtype rho,
-								dtype *__restrict__ p,
-								dtype *__restrict__ d,
-								dtype *__restrict__ m,
-								dtype *__restrict__ u,
-								size_t N, int stream_idx ) {
-								
-								
+void cu_elementwise_adadelta (
+	dtype learning_rate, dtype rho,
+	dtype *__restrict__ p,
+	dtype *__restrict__ d,
+	dtype *__restrict__ m,
+	dtype *__restrict__ u,
+	size_t N, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_adadelta <<< num_blocks, NUM_THREADS, stream_idx>>> ( learning_rate, rho, p, d, m, u, N );
+	kernel_elementwise_adadelta <<<num_blocks, NUM_THREADS, stream_idx>>> ( learning_rate, rho, p, d, m, u, N );
 	
 }
 
-void cu_elementwise_adadelta_decay (	dtype learning_rate, dtype rho,
-										dtype *__restrict__ p,
-										dtype *__restrict__ d,
-										dtype *__restrict__ m,
-										dtype *__restrict__ u,
-										size_t N, dtype decay, int stream_idx ) {
-										
-										
+void cu_elementwise_adadelta_decay (
+	dtype learning_rate, dtype rho,
+	dtype *__restrict__ p,
+	dtype *__restrict__ d,
+	dtype *__restrict__ m,
+	dtype *__restrict__ u,
+	size_t N, dtype decay, int stream_idx ) {
+	
+	
 	size_t num_blocks = ( N + NUM_THREADS - 1 ) / NUM_THREADS;
-	kernel_elementwise_adadelta_decay <<< num_blocks, NUM_THREADS, stream_idx>>> ( learning_rate, rho, p, d, m, u, N,
+	kernel_elementwise_adadelta_decay <<<num_blocks, NUM_THREADS, stream_idx>>> ( learning_rate, rho, p, d, m, u, N,
 			decay );
 			
 }
