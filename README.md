@@ -18,7 +18,9 @@ or for precise FP64 (useful for debugging)
 make PRECISE_MATH=1 cuda
 ```
 
-CPU versions are outdated, OpenCL version is not fully implemented
+CUDA version is most recent, CPU versions are outdated, OpenCL version is not really implemented
+
+(Waiting for CUDA 8 final and heterogenous lambdas)
 
 If you still wish to compile the CPU version run:
 
