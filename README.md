@@ -1,7 +1,10 @@
 
 
 # Array-LSTM
-Implementation of recurrent array memory from "Recurrent Memory Array Structures" Technical Report, Arxiv 1607.03085, 11 July 2016
+Implementation of recurrent array memory from "Recurrent Memory Array Structures" Technical Report
+
+Arxiv 1607.03085, 11 July 2016
+
 https://arxiv.org/abs/1607.03085
 ## Getting Started
 to compile (with CUDA):
