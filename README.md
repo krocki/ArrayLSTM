@@ -3,9 +3,19 @@
 # Array-LSTM
 Implementation of recurrent array memory from "Recurrent Memory Array Structures" Technical Report
 
-Arxiv 1607.03085, 11 July 2016
-
 https://arxiv.org/abs/1607.03085
+
+It is OK to use this code for research and other non-commercial purposes, please cite the report:
+
+```
+@article{rocki2016recurrent,
+  title={Recurrent Memory Array Structures},
+  author={Rocki, Kamil},
+  journal={arXiv preprint arXiv:1607.03085},
+  year={2016}
+}
+```
+
 ## Getting Started
 to compile (with CUDA):
 
