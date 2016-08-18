@@ -214,7 +214,7 @@ int main ( int argc, char *argv[] ) {
 		epoch_timer.start();
 		flops_timer.start();
 		
-		for ( size_t i = 0; i < epoch_length; i += S ) {
+		for ( size_t i = 0; i < epoch_length; i += S - 1 ) {
 		
 			loss = 0;
 			
@@ -257,7 +257,7 @@ int main ( int argc, char *argv[] ) {
 			
 				size_t event = ( ( int * ) data.data() ) [positions[b]];      // current observation, uchar (0-255)
 				
-				for ( size_t t = 0; t < S; t++ ) {
+				for ( size_t t = 1; t < S; t++ ) {
 				
 					size_t ev_x = ( ( int * ) data.data() ) [positions[b] + t];
 					size_t ev_t = ( ( int * ) data.data() ) [positions[b] + t +
@@ -268,7 +268,7 @@ int main ( int argc, char *argv[] ) {
 					
 				}
 				
-				positions[b] += S;
+				positions[b] += S - 1;
 				
 			}
 			
