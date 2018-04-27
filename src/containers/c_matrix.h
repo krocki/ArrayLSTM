@@ -563,10 +563,8 @@ void GEMM ( matrix<T> &c, const matrix<T> &a, const matrix<T> &b,
 			const bool aT = false, const bool bT = false,
 			const T alpha = 1.0f, const T beta = 1.0f ) {
 			
-	enum CBLAS_TRANSPOSE transA = aT ? CblasTrans :
-								  CblasNoTrans;
-	enum CBLAS_TRANSPOSE transB = bT ? CblasTrans :
-								  CblasNoTrans;
+	CBLAS_TRANSPOSE transA = aT ? CblasTrans : CblasNoTrans;
+	CBLAS_TRANSPOSE transB = bT ? CblasTrans : CblasNoTrans;
 								  
 	size_t M = c.rows();
 	size_t N = c.cols();

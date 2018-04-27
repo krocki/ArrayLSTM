@@ -82,8 +82,8 @@ int main ( int argc, char *argv[] ) {
 	//MatrixXi 	_data           = rawread ( "data/large/enwiki-20160601-pages-articles.xml" );
 	
 	/* TODO: move to command line */
-	MatrixXi 	_data           = rawread ( "data/enwik8.txt" );
-	std::string out_filename    	= "enwik8_lstm_0708_N" + std::to_string ( N ) +
+	MatrixXi 	_data           = rawread ( "data/enwik8" );
+	std::string out_filename    	= "enwik8_lstm_0708f_N" + std::to_string ( N ) +
 									  "_S" + std::to_string ( S ) +
 									  "_B" + std::to_string ( B ) ;
 									  

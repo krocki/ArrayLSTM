@@ -37,15 +37,15 @@
 #ifdef __USE_CUDA__
 	
 	#include <layers/lstm_cuda.h>
-	#include <layers/hlstm.h>
+	//#include <layers/hlstm.h>
 	#include <layers/cu_softmax.h>
-	#include <layers/splstm.h>
-	#include <layers/clstm.h>
-	#include <layers/hmlstm.h>
-	#include <layers/alstm.h>
-	#include <layers/dolstm.h>
-	#include <layers/attLSTM.h>
-	#include <layers/hardattLSTM.h>
+	//#include <layers/splstm.h>
+	//#include <layers/clstm.h>
+	//#include <layers/hmlstm.h>
+	//#include <layers/alstm.h>
+	//#include <layers/dolstm.h>
+	//#include <layers/attLSTM.h>
+	//#include <layers/hardattLSTM.h>
 	
 #else
 	
