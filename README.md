@@ -16,6 +16,8 @@ It is OK to use this code for research and other non-commercial purposes, please
 }
 ```
 
+See Surprisal-Feedback LSTM repo for CUDA implementation.
+
 ## Getting Started
 to compile (with CUDA):
 
